@@ -1,0 +1,62 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let livro of livrosLista" ng>
+        <div *ngIf="livro.shelf == 'currentlyReading'">
+            <h1>Lendo atualmente</h1>
+            <div class="card h-100">
+                <img [src]="livro.imageLinks.smallThumbnail" class="card-img-top thumb" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{livro.title}}</h5>
+                    <p class="card-text">{{livro.authors}}</p>
+                </div>
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Small button
+            </button>
+                <ul class="dropdown-menu">
+                    <li>Lendo atualmente</li>
+                    <li>Quero Ler</li>
+                    <li>Lido</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col" *ngFor="let livro of livrosLista">
+        <div *ngIf="livro.shelf === 'read'">
+            <h1>Leitura concluida</h1>
+            <div class="card h-100">
+                <img [src]="livro.imageLinks.smallThumbnail" class="card-img-top thumb" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{livro.title}}</h5>
+                    <p class="card-text">{{livro.authors}}</p>
+                </div>
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Small button
+                    </button>
+                <ul class="dropdown-menu">
+                    <li>Lendo atualmente</li>
+                    <li>Quero Ler</li>
+                    <li>Lido</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col" *ngFor="let livro of livrosLista">
+        <div *ngIf="livro.shelf === 'wantToRead'">
+            <h1>Quero ler</h1>
+            <div class="card h-100">
+                <img [src]="livro.imageLinks.smallThumbnail" class="card-img-top thumb" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{livro.title}}</h5>
+                    <p class="card-text">{{livro.authors}}</p>
+                </div>
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Small button
+                    </button>
+                <ul class="dropdown-menu">
+                    <li>Lendo atualmente</li>
+                    <li>Quero Ler</li>
+                    <li>Lido</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

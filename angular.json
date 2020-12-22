@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "leitura-lista"
+  "defaultProject": "leitura-lista",
+  "cli": {
+    "analytics": "6c31f66b-1359-4604-a3bf-4f7ae647e595"
+  }
 }
